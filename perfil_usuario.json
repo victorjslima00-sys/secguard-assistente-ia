@@ -1,0 +1,33 @@
+{
+  "perfil_id": "USR-MOCK-001",
+  "nome": "Carlos Fictício",
+  "nota_importante": "DADOS COMPLETAMENTE FICTÍCIOS — Criados para fins de demonstração do SecGuard. Não representam nenhuma pessoa real.",
+  "nivel_maturidade_seguranca": "Iniciante",
+  "descricao_nivel": "Usuário com conhecimentos básicos de informática. Sabe usar e-mail, redes sociais e aplicativos bancários, mas tem pouca familiaridade com conceitos de segurança digital.",
+  "areas_de_maior_vulnerabilidade": [
+    "Phishing e engenharia social",
+    "Senhas fracas e reutilizadas",
+    "Falta de backup dos dados importantes"
+  ],
+  "historico_incidentes": [
+    {
+      "data": "2024-03-15",
+      "tipo": "Clique em link de phishing",
+      "descricao": "Recebeu e-mail falso do 'banco' e clicou no link. Percebeu antes de inserir dados.",
+      "resolucao": "Não houve comprometimento. Alterou senha preventivamente."
+    },
+    {
+      "data": "2024-06-22",
+      "tipo": "Tentativa de smishing",
+      "descricao": "Recebeu SMS sobre 'pacote retido nos Correios' com link suspeito.",
+      "resolucao": "Não clicou no link. Reportou como spam."
+    }
+  ],
+  "preferencia_comunicacao": "linguagem_simples",
+  "dispositivos_em_uso": ["Smartphone Android", "Notebook Windows"],
+  "servicos_criticos": ["E-mail Gmail", "App bancário", "WhatsApp", "Redes sociais"],
+  "mfa_ativo": false,
+  "gerenciador_senhas_usa": false,
+  "frequencia_backup": "Nunca realiza backup estruturado",
+  "objetivo_aprendizado": "Aprender a identificar golpes e proteger contas pessoais"
+}

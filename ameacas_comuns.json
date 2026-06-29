@@ -1,0 +1,150 @@
+[
+  {
+    "ameaca_id": "PHI-001",
+    "nome": "Phishing por E-mail",
+    "categoria": "Engenharia Social",
+    "subcategoria": "Fraude Digital",
+    "descricao": "Tentativa de enganar o usuário para revelar informações confidenciais (senhas, dados bancários) por meio de e-mails falsos que imitam comunicações legítimas de bancos, empresas ou órgãos governamentais.",
+    "sinais_de_alerta": [
+      "E-mail pede senha, token ou dados bancários completos",
+      "Endereço do remetente é parecido mas diferente do legítimo (ex: seguranca@banco-itau-oficial.com)",
+      "Urgência excessiva: 'Sua conta será bloqueada em 24 horas'",
+      "Links que ao passar o mouse mostram endereços diferentes do exibido",
+      "Erros de ortografia ou formatação estranha",
+      "Solicitação de clique em anexo inesperado"
+    ],
+    "impacto": "Alto",
+    "frequencia_brasil": "Vetor mais comum de ataque — 82% das violações de dados têm componente humano (Verizon DBIR 2024)",
+    "o_que_fazer": [
+      "NÃO clique em links do e-mail suspeito",
+      "NÃO abra anexos de remetentes desconhecidos",
+      "Acesse o site oficial digitando o endereço diretamente no navegador",
+      "Entre em contato com a empresa pelo canal oficial para confirmar",
+      "Reporte o e-mail ao remetente legítimo e ao CERT.br (abuse@cert.br)",
+      "Se clicou no link: altere suas senhas imediatamente e ative MFA"
+    ],
+    "o_que_nao_fazer": [
+      "Não responda ao e-mail com dados pessoais",
+      "Não ligue para o número informado no e-mail suspeito",
+      "Não faça download de arquivos vinculados"
+    ],
+    "fonte_referencia": "CERT.br — Cartilha de Segurança para Internet",
+    "legislacao_aplicavel": "Lei 12.737/2012 (Lei Carolina Dieckmann) — Crime de invasão de dispositivo informático"
+  },
+  {
+    "ameaca_id": "PHI-002",
+    "nome": "Smishing (Phishing por SMS)",
+    "categoria": "Engenharia Social",
+    "subcategoria": "Fraude por Mensagem de Texto",
+    "descricao": "Variante do phishing realizada via SMS. O usuário recebe mensagem urgente com link malicioso, frequentemente se passando por banco, Correios, operadora ou órgão governamental.",
+    "sinais_de_alerta": [
+      "SMS de número desconhecido com link encurtado (bit.ly, t.co)",
+      "Mensagens sobre 'pacote retido', 'PIX não autorizado', 'conta bloqueada'",
+      "Links que levam a sites com domínio suspeito ou muito parecido com o oficial",
+      "Solicitação de dados pessoais ou bancários via link no SMS"
+    ],
+    "impacto": "Alto",
+    "frequencia_brasil": "Crescimento de 45% em 2023 no Brasil, especialmente golpes envolvendo Correios e PIX",
+    "o_que_fazer": [
+      "NÃO clique no link",
+      "Verifique a informação diretamente no app ou site oficial da empresa",
+      "Bloqueie o número e reporte como spam no seu celular",
+      "Se clicou: escaneie o dispositivo com antivírus e altere senhas bancárias"
+    ],
+    "o_que_nao_fazer": [
+      "Não confirme dados pessoais via link de SMS",
+      "Não instale aplicativos solicitados via SMS"
+    ],
+    "fonte_referencia": "CERT.br — Phishing",
+    "legislacao_aplicavel": "Lei 12.737/2012"
+  },
+  {
+    "ameaca_id": "RAN-001",
+    "nome": "Ransomware",
+    "categoria": "Malware",
+    "subcategoria": "Software de Extorsão",
+    "descricao": "Software malicioso que criptografa os arquivos da vítima e exige pagamento (resgate) em criptomoeda para liberar o acesso. Pode afetar dispositivos pessoais e paralisar empresas inteiras.",
+    "sinais_de_alerta": [
+      "Arquivos com extensão desconhecida (ex: .locked, .encrypted, .WNCRY)",
+      "Impossibilidade de abrir documentos e fotos normais",
+      "Nota de resgate (ransom note) aparece na tela",
+      "Computador lento ou com alta atividade de disco sem motivo aparente"
+    ],
+    "impacto": "Crítico",
+    "frequencia_brasil": "Brasil é o 2º país mais atacado por ransomware na América Latina (Kaspersky 2024)",
+    "o_que_fazer": [
+      "IMEDIATAMENTE: Desconecte o computador da rede (WiFi e cabo) — não desligue",
+      "Não pague o resgate — não há garantia de recuperação dos dados",
+      "Documente: fotografe a tela com a nota de resgate",
+      "Contate um especialista em segurança ou empresa de resposta a incidentes",
+      "Verifique se há backup disponível para restauração",
+      "Registre boletim de ocorrência na Delegacia de Crimes Cibernéticos"
+    ],
+    "o_que_nao_fazer": [
+      "Não tente descriptografar arquivos com ferramentas desconhecidas — pode piorar",
+      "Não conecte HDs externos ou pendrives — pode propagar o ransomware",
+      "Não reinicie a máquina antes de coletar evidências"
+    ],
+    "prevencao": [
+      "Manter backups regulares offline (regra 3-2-1: 3 cópias, 2 mídias, 1 offsite)",
+      "Manter sistema operacional e softwares atualizados",
+      "Não abrir anexos de e-mails desconhecidos",
+      "Usar antivírus/EDR atualizado"
+    ],
+    "fonte_referencia": "CERT.br / Kaspersky Threat Intelligence",
+    "legislacao_aplicavel": "Art. 154-A do Código Penal — Invasão de dispositivo informático"
+  },
+  {
+    "ameaca_id": "PIX-001",
+    "nome": "Golpe do PIX / Falso Comprovante",
+    "categoria": "Fraude Financeira Digital",
+    "subcategoria": "Engenharia Social",
+    "descricao": "Golpistas enviam comprovantes de PIX falsos ou manipulados para induzir a vítima a confirmar o recebimento de um valor que nunca chegou à conta. Comum em vendas por WhatsApp e redes sociais.",
+    "sinais_de_alerta": [
+      "Comprovante de PIX enviado sem você ter verificado o saldo",
+      "Pressão para confirmar recebimento antes de verificar na conta",
+      "Comprovante com formatação diferente do padrão bancário",
+      "Valor muito próximo ao preço, mas não exato"
+    ],
+    "impacto": "Alto",
+    "o_que_fazer": [
+      "SEMPRE verifique o saldo na conta/app do banco ANTES de confirmar recebimento",
+      "Nunca aceite comprovante no WhatsApp como única confirmação",
+      "Aguarde a compensação aparecer no extrato bancário",
+      "Em caso de fraude: contate o banco e registre ocorrência policial"
+    ],
+    "o_que_nao_fazer": [
+      "Não entregue produto ou serviço antes de confirmar o crédito no extrato",
+      "Não confie apenas na captura de tela enviada pelo comprador"
+    ],
+    "fonte_referencia": "Banco Central do Brasil — Dicas de Segurança PIX",
+    "legislacao_aplicavel": "Art. 171 do Código Penal — Estelionato"
+  },
+  {
+    "ameaca_id": "SEN-001",
+    "nome": "Ataque de Força Bruta / Credential Stuffing",
+    "categoria": "Ataque a Credenciais",
+    "subcategoria": "Acesso Não Autorizado",
+    "descricao": "Tentativa automatizada de adivinhar senhas testando milhares de combinações (força bruta) ou usando listas de senhas vazadas de outros serviços (credential stuffing). Favorecido pelo uso de senhas fracas ou repetidas.",
+    "sinais_de_alerta": [
+      "Notificação de tentativa de login de local desconhecido",
+      "Você não consegue mais acessar sua conta",
+      "Atividade estranha na conta (e-mails enviados que você não enviou)"
+    ],
+    "impacto": "Alto",
+    "o_que_fazer": [
+      "Altere a senha imediatamente por canal seguro",
+      "Ative autenticação de dois fatores (MFA) — prioridade máxima",
+      "Verifique se seu e-mail aparece em vazamentos: haveibeenpwned.com",
+      "Revise acessos autorizados nas configurações da conta",
+      "Notifique o suporte da plataforma afetada"
+    ],
+    "prevencao": [
+      "Use senhas únicas e complexas para cada serviço (gerenciador de senhas)",
+      "Ative MFA em todos os serviços críticos (e-mail, banco, redes sociais)",
+      "Nunca reutilize senhas entre plataformas"
+    ],
+    "fonte_referencia": "NIST SP 800-63B — Digital Identity Guidelines",
+    "legislacao_aplicavel": "Art. 154-A do Código Penal"
+  }
+]

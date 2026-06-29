@@ -1,0 +1,129 @@
+[
+  {
+    "pratica_id": "BP-001",
+    "titulo": "Autenticação de Dois Fatores (MFA/2FA)",
+    "dominio": "Controle de Acesso",
+    "nivel_dificuldade": "Básico",
+    "prioridade": "Crítica",
+    "descricao": "Camada adicional de segurança que exige uma segunda forma de verificação além da senha. Mesmo que alguém descubra sua senha, não consegue acessar sua conta sem o segundo fator.",
+    "por_que_importa": "Reduz em 99,9% o risco de comprometimento de contas, segundo dados da Microsoft (2023). É a medida de segurança com melhor relação custo-benefício disponível.",
+    "como_implementar": [
+      "Vá até as configurações de segurança do serviço (Google, banco, redes sociais)",
+      "Procure por 'Autenticação de dois fatores' ou '2FA'",
+      "Escolha o método: aplicativo autenticador (mais seguro) ou SMS (mais prático)",
+      "Recomendação de app: Google Authenticator ou Microsoft Authenticator (gratuitos)",
+      "Salve os códigos de recuperação em local seguro e offline"
+    ],
+    "ferramentas_sugeridas": [
+      "Google Authenticator (iOS/Android) — gratuito",
+      "Microsoft Authenticator (iOS/Android) — gratuito",
+      "Authy — gratuito, com backup em nuvem"
+    ],
+    "onde_aplicar_primeiro": ["E-mail principal", "Conta bancária/app financeiro", "WhatsApp/Telegram", "Redes sociais", "Plataformas de trabalho (Teams, Slack)"],
+    "alinhamento_framework": ["NIST SP 800-63B", "CIS Controls v8 — Control 6", "OWASP Authentication Cheat Sheet"],
+    "legislacao_relacionada": "LGPD Art. 46 — medidas técnicas de segurança"
+  },
+  {
+    "pratica_id": "BP-002",
+    "titulo": "Gerenciador de Senhas",
+    "dominio": "Controle de Acesso",
+    "nivel_dificuldade": "Básico",
+    "prioridade": "Alta",
+    "descricao": "Aplicativo que gera, armazena e preenche automaticamente senhas únicas e complexas para cada serviço. O usuário precisa lembrar apenas de uma senha mestra forte.",
+    "por_que_importa": "61% dos incidentes de segurança envolvem senhas fracas ou reutilizadas (Verizon DBIR 2024). Um gerenciador elimina o problema de raiz sem exigir memória extraordinária.",
+    "como_implementar": [
+      "Escolha um gerenciador confiável (veja ferramentas sugeridas)",
+      "Crie uma senha mestra forte: use uma frase com símbolos (ex: 'Meu#Gato@DormeSemprE!')",
+      "Anote a senha mestra em papel e guarde em local físico seguro",
+      "Instale a extensão no navegador para preenchimento automático",
+      "Vá cadastrando seus serviços gradualmente, começando pelos mais críticos",
+      "Ative o backup criptografado do cofre"
+    ],
+    "ferramentas_sugeridas": [
+      "Bitwarden — gratuito, código aberto, altamente recomendado",
+      "KeePass — gratuito, offline, código aberto",
+      "1Password — pago, excelente para famílias e equipes"
+    ],
+    "como_criar_senha_mestra": "Use uma frase memorável com 4+ palavras, números e símbolos: 'Cafe@Manha2024!Delicia' — 20 caracteres, fácil de lembrar, difícil de quebrar.",
+    "alinhamento_framework": ["NIST SP 800-63B", "CIS Controls v8 — Control 5"],
+    "legislacao_relacionada": "LGPD Art. 46"
+  },
+  {
+    "pratica_id": "BP-003",
+    "titulo": "Backup Regular (Regra 3-2-1)",
+    "dominio": "Continuidade e Resiliência",
+    "nivel_dificuldade": "Intermediário",
+    "prioridade": "Alta",
+    "descricao": "Estratégia sistemática de backup para garantir que dados importantes possam ser recuperados após incidentes (ransomware, falha de hardware, acidente). A Regra 3-2-1: 3 cópias dos dados, em 2 mídias diferentes, com 1 cópia offsite.",
+    "por_que_importa": "O backup é a única defesa efetiva contra ransomware. Sem backup, o único recurso após um ataque é pagar o resgate — sem garantia de recuperação.",
+    "como_implementar": [
+      "CÓPIA 1 (original): Seus arquivos no dispositivo principal",
+      "CÓPIA 2 (local): HD externo ou NAS desconectado da rede quando não em uso",
+      "CÓPIA 3 (nuvem/offsite): Google Drive, OneDrive ou Backblaze",
+      "Configure backup automático semanal (no mínimo) para dados críticos",
+      "Teste a restauração do backup periodicamente — backup não testado não é confiável",
+      "Mantenha o HD externo DESCONECTADO quando não estiver fazendo backup (proteção contra ransomware)"
+    ],
+    "ferramentas_sugeridas": [
+      "Google Drive / OneDrive — gratuito até 15GB/5GB",
+      "Backblaze — solução de backup em nuvem paga, acessível",
+      "Windows Backup / Time Machine (Mac) — nativo e gratuito"
+    ],
+    "alinhamento_framework": ["NIST CSF — Recover Function", "CIS Controls v8 — Control 11", "ISO 22301 — Continuidade de Negócios"],
+    "legislacao_relacionada": "Para empresas: LGPD exige integridade e disponibilidade dos dados pessoais (Art. 46)"
+  },
+  {
+    "pratica_id": "BP-004",
+    "titulo": "Atualização de Software e Sistema Operacional",
+    "dominio": "Gestão de Vulnerabilidades",
+    "nivel_dificuldade": "Básico",
+    "prioridade": "Alta",
+    "descricao": "Manter o sistema operacional e todos os softwares instalados atualizados é uma das formas mais efetivas de prevenir ataques. Atualizações frequentemente corrigem vulnerabilidades de segurança exploráveis.",
+    "por_que_importa": "57% dos ataques exploram vulnerabilidades para as quais já existia correção disponível, mas não aplicada (Ponemon Institute). Atualizar é grátis. A consequência de não atualizar pode ser catastrófica.",
+    "como_implementar": [
+      "Ative as atualizações automáticas do Windows/macOS/Linux",
+      "Mantenha o navegador sempre na versão mais recente",
+      "Atualize aplicativos regularmente (especialmente Office, Adobe, antivírus)",
+      "Remova softwares que não usa mais — menos superfície de ataque",
+      "Para empresas: implante um processo de gestão de patches (ex: WSUS, Intune)"
+    ],
+    "alinhamento_framework": ["CIS Controls v8 — Control 7", "NIST CSF — Protect Function", "OWASP A06:2021 — Vulnerable and Outdated Components"],
+    "frequencia_recomendada": "Sistema operacional: imediatamente ao disponibilizar atualizações de segurança. Verificação geral: semanal."
+  },
+  {
+    "pratica_id": "BP-005",
+    "titulo": "Primeiros Passos Após um Incidente de Segurança",
+    "dominio": "Resposta a Incidentes",
+    "nivel_dificuldade": "Intermediário",
+    "prioridade": "Crítica",
+    "descricao": "Protocolo de resposta imediata para os primeiros momentos após perceber que foi vítima de um ataque, golpe ou violação de dados. As ações nas primeiras horas são determinantes para limitar o dano.",
+    "por_que_importa": "O tempo médio de contenção de uma violação é de 73 dias quando não há protocolo de resposta. Com protocolo, pode ser reduzido a horas (IBM Cost of Data Breach Report 2024).",
+    "passos_imediatos": {
+      "0_a_15_minutos": [
+        "Desconecte o dispositivo afetado da internet e da rede interna — NÃO o desligue",
+        "Documente tudo: hora, o que viu, capturas de tela, mensagens recebidas",
+        "Não tente 'resolver sozinho' — ações sem conhecimento podem destruir evidências"
+      ],
+      "15_a_60_minutos": [
+        "Altere senhas de contas críticas de um dispositivo NÃO afetado",
+        "Avise pessoas próximas que possam ter sido impactadas (se seus dados foram expostos)",
+        "Contate o suporte do serviço afetado (banco, plataforma)",
+        "Registre boletim de ocorrência (delegacia ou online via delegacia virtual do seu estado)"
+      ],
+      "nas_primeiras_24_horas": [
+        "Para empresas: acione o plano de resposta a incidentes e notifique a ANPD se dados pessoais foram expostos",
+        "Reporte ao CERT.br: cert.br",
+        "Considere acionar especialista em segurança ou empresa de forense digital",
+        "Revise todos os acessos e revogue tokens/sessões abertas nas plataformas afetadas"
+      ]
+    ],
+    "contatos_emergencia_brasil": {
+      "CERT.br": "cert.br — Reporte incidentes e receba orientação",
+      "ANPD": "anpd.gov.br — Para violações de dados pessoais (LGPD)",
+      "Delegacia_Virtual": "Disponível na maioria dos estados para B.O. online",
+      "Febraban_SAC": "Para fraudes bancárias — número no verso do cartão ou app do banco"
+    ],
+    "alinhamento_framework": ["NIST CSF — Respond & Recover", "ISO 27035 — Gestão de Incidentes de Segurança"],
+    "legislacao_relacionada": "LGPD Art. 48 — obrigação de comunicar incidentes à ANPD (para empresas, prazo: 72 horas)"
+  }
+]

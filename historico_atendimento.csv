@@ -1,0 +1,9 @@
+data,tipo_consulta,tema,resumo_duvida,resolucao_dada,satisfacao_usuario,tempo_resposta_seg
+2024-03-16,Orientacao_pos_incidente,Phishing,"Usuário clicou em link suspeito de e-mail bancário. Quer saber se foi comprometido.","Orientado a alterar senha, ativar MFA e monitorar extrato bancário. Explicado como verificar logins suspeitos.",5,45
+2024-04-02,Duvida_preventiva,Senhas,"Perguntou se pode usar a mesma senha em múltiplos serviços.","Explicado risco de credential stuffing. Recomendado uso de gerenciador de senhas (Bitwarden).",5,38
+2024-05-10,Identificacao_ameaca,Smishing,"Recebeu SMS sobre pacote retido nos Correios com link suspeito.","Identificado como smishing. Orientado a não clicar, verificar no site oficial dos Correios e bloquear número.",5,32
+2024-05-28,Duvida_preventiva,Backup,"Perguntou como proteger fotos e documentos importantes de ataques.","Explicada regra 3-2-1 de backup. Recomendado Google Drive + HD externo.",4,52
+2024-06-15,Orientacao_pos_incidente,Ransomware,"Recebeu alerta de ransomware em notebook de trabalho.","Orientado a desconectar da rede, não desligar, contatar TI da empresa e CERT.br. Explicado que não deve pagar resgate.",5,65
+2024-07-03,Duvida_preventiva,MFA,"Perguntou o que é autenticação de dois fatores e como ativar.","Explicado conceito de MFA, importância e passo a passo de ativação no Gmail e WhatsApp. Recomendado Google Authenticator.",5,48
+2024-07-20,Identificacao_ameaca,Phishing,"Recebeu e-mail da 'Receita Federal' pedindo documentos urgentes.","Identificado como phishing. Explicados 5 sinais de alerta presentes no e-mail.",5,29
+2024-08-05,Duvida_preventiva,Privacidade,"Perguntou quais dados o SecGuard coleta sobre ele.","Explicado que o SecGuard não coleta dados pessoais. Dados do perfil são mockados e fictícios. Contexto de LGPD explicado.",5,22
